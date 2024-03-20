@@ -1,0 +1,33 @@
+.containerGlobal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eefaff;
+    gap: 25px
+}
+
+.containerBox{
+    width: 500px;
+    max-height: 725px;
+    min-height: 575px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.267);
+    gap: 15px;
+}
+
+.customTextfield {
+    background-color: white;
+    border: 2px solid #3498db;
+    width: 350px;
+    color: #f3f3f3;
+  }
