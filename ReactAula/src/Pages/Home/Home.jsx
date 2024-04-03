@@ -37,7 +37,7 @@ function Home() {
     
         try {
     
-          const response = await fetch('http://localhost:5000/add-user', {
+          const response = await fetch('http://10.10.6.72:5000/add-user', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -70,28 +70,15 @@ return(
                 onChange={handleInputChange}
             />
 
-            <FormControl className={styles.customTextfield} variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                <OutlinedInput
-                    id="outlined-adornment-password"
-                    type={showPassword ? 'text' : 'password'}
-                    endAdornment={
-                        <InputAdornment position="end">
-                            <IconButton
-                                aria-label="toggle password visibility"
-                                onClick={handleClickShowPassword}
-                                onMouseDown={handleMouseDownPassword}
-                                edge="end"
-                            >
-                                {showPassword ? <VisibilityOff /> : <Visibility />}
-                            </IconButton>
-                        </InputAdornment>
-                    }
-                    label="Password"
-                />
-            </FormControl>
-
-            
+            <TextField 
+                id="outlined-basic"
+                label="Senha"
+                variant="outlined"
+                name="password"
+                value={formData.password}
+                className={styles.customTextfield}
+                onChange={handleInputChange}
+            />
 
             <Button variant="contained" onClick={handleSubmit}>CADASTRAR</Button>
 
